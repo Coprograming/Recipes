@@ -47,11 +47,15 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             let entity = NSEntityDescription.entityForName("Recipie", inManagedObjectContext: context)!
             let recipe = Recipie(entity: entity, insertIntoManagedObjectContext: context)
             recipe.title = title
+            print(recipe.title)
             recipe.ingredients = recipeIngredients.text
+            print(recipe.ingredients)
             recipe.steps = recipeSteps.text
+            print(recipe.steps)
             recipe.setRecipeImage(recipeImg.image!)
             
             context.insertObject(recipe)
+            print(recipe)
             
             do {
                 try context.save()
@@ -62,5 +66,5 @@ class CreateRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
-
+    
 }

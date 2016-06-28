@@ -1,14 +1,14 @@
 //
-//  RecipieCell.swift
+//  RecipiesCell.swift
 //  recipies
 //
-//  Created by Kasey Schlaudt on 6/27/16.
+//  Created by Kasey Schlaudt on 6/28/16.
 //  Copyright © 2016 coprograming.com. All rights reserved.
 //
 
 import UIKit
 
-class RecipieCell: UITableViewCell {
+class RecipiesCell: UITableViewCell {
 
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeImg: UIImageView!
@@ -21,5 +21,4 @@ class RecipieCell: UITableViewCell {
         recipeTitle.text = recipe.title
         recipeImg.image = recipe.getRecipeImg()
     }
-    
 }

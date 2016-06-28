@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     var recipies = [Recipie]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,14 +43,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("RecipieCell") as? RecipieCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier("RecipiesCell") as? RecipiesCell {
             
             let recipe = recipies[indexPath.row]
+            
             cell.configureCell(recipe)
             return cell
         } else {
             
-            return RecipieCell()
+            return RecipiesCell()
         }
         
     }
